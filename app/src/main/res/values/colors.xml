@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    //splash screen background color and appbar color
+    <!--splash screen background color and appbar color-->
     <color name="colorSplash">#329b0d</color>
     <color name="colorWhite">#FFFFFF</color>
 </resources>
