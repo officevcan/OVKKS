@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">OVKKSApp</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--Navigation Item Name-->
+    <string name="navHome">Home</string>
+    <string name="navAboutUs">About Us</string>
+    <string name="navHealth">Health</string>
+    <string name="navPlant">Plant</string>
+    <string name="navGallery">Gallery</string>
+    <string name="navWaRev">Wage Revision</string>
+    <string name="navGrav">Graviance</string>
+    <string name="navCir">Circular</string>
+    <string name="navLogin">Login</string>
 </resources>

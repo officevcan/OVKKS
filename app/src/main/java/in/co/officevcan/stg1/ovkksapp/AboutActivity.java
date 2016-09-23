@@ -42,7 +42,7 @@ public class AboutActivity extends AppCompatActivity
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent ii = new Intent(getApplicationContext(), WelcomeActivity.class);
+        Intent ii = new Intent(getApplicationContext(), NavigationActivity.class);
         startActivity(ii);
         return super.onOptionsItemSelected(item);
     }

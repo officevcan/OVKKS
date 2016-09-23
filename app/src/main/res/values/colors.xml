@@ -7,4 +7,7 @@
     <!--splash screen background color and appbar color-->
     <color name="colorSplash">#329b0d</color>
     <color name="colorWhite">#FFFFFF</color>
+
+    <!--NavColor-->
+    <color name="colorNav">#616161</color>
 </resources>
