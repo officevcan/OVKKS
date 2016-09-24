@@ -18,10 +18,10 @@ public class NavigationActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setLogo(R.mipmap.welcome_logo);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -72,6 +72,9 @@ public class NavigationActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.navHome) {
+            Intent i=new Intent(NavigationActivity.this,NavigationActivity.class);
+            startActivity(i);
+            finish();
             // Handle the camera action
         } else if (id == R.id.navAboutUs) {
             Intent i = new Intent(NavigationActivity.this, AboutActivity.class);
