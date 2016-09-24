@@ -25,7 +25,7 @@
             android:title="@string/navGallery" />
         <item
             android:id="@+id/navWaRev"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@mipmap/wage_nav"
             android:title="@string/navWaRev" />
 
         <item
@@ -35,12 +35,12 @@
 
         <item
             android:id="@+id/navCir"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@mipmap/circlular_nav"
             android:title="@string/navCir" />
 
         <item
             android:id="@+id/navLogin"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@mipmap/login_nav"
             android:title="@string/navLogin" />
 
     </group>
