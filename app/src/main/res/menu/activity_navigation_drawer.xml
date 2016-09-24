@@ -4,28 +4,28 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/navHome"
-            android:icon="@mipmap/home_nav"
+            android:icon="@drawable/home_nav"
             android:title="@string/navHome" />
         <item
             android:id="@+id/navAboutUs"
-            android:icon="@mipmap/about_nav"
+            android:icon="@drawable/about_nav"
             android:title="@string/navAboutUs" />
         <item
             android:id="@+id/navHealth"
-            android:icon="@mipmap/health_nav"
+            android:icon="@drawable/health_nav"
             android:title="@string/navHealth" />
         <item
             android:id="@+id/navPlant"
-            android:icon="@mipmap/plant_nav"
+            android:icon="@drawable/plant_nav"
             android:title="@string/navPlant" />
 
         <item
             android:id="@+id/navGallery"
-            android:icon="@mipmap/galleries_nav"
+            android:icon="@drawable/galleries_nav"
             android:title="@string/navGallery" />
         <item
             android:id="@+id/navWaRev"
-            android:icon="@mipmap/wage_nav"
+            android:icon="@drawable/wage_nav"
             android:title="@string/navWaRev" />
 
         <item
@@ -35,12 +35,12 @@
 
         <item
             android:id="@+id/navCir"
-            android:icon="@mipmap/circlular_nav"
+            android:icon="@drawable/circlular_nav"
             android:title="@string/navCir" />
 
         <item
             android:id="@+id/navLogin"
-            android:icon="@mipmap/login_nav"
+            android:icon="@drawable/login_nav"
             android:title="@string/navLogin" />
 
     </group>
