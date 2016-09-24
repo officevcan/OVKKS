@@ -15,7 +15,7 @@
         android:layout_below="@+id/tool_bar"
         android:background="@color/colorSplash"
         app:tabGravity="fill"
-        app:tabIndicatorColor="@color/colorWhite"
+        app:tabIndicatorColor="@color/colorIndicater"
         app:tabMode="scrollable"
         app:tabSelectedTextColor="@color/colorWhite"
         app:tabTextColor="@color/colorWhite"></android.support.design.widget.TabLayout>

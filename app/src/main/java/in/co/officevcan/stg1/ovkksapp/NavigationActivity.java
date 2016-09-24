@@ -1,6 +1,7 @@
 package in.co.officevcan.stg1.ovkksapp;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
@@ -22,7 +23,12 @@ public class NavigationActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigation);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+            setContentView(R.layout.activity_navigation);
+
+        }
+
+        //      setContentView(R.layout.activity_navigation);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setLogo(R.mipmap.welcome_logo);
@@ -81,7 +87,7 @@ public class NavigationActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.navHome) {
-            Intent i=new Intent(NavigationActivity.this,NavigationActivity.class);
+            Intent i = new Intent(NavigationActivity.this, NavigationActivity.class);
             startActivity(i);
             finish();
             // Handle the camera action
