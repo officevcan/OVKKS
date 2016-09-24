@@ -1,7 +1,6 @@
 package in.co.officevcan.stg1.ovkksapp;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
@@ -29,7 +28,7 @@ public class NavigationActivity extends AppCompatActivity
         setContentView(R.layout.activity_navigation);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setLogo(R.drawable.welcome_logo);
+        toolbar.setLogo(R.mipmap.welcome_logo);
         setSupportActionBar(toolbar);
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
