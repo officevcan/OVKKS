@@ -7,19 +7,12 @@
     android:fitsSystemWindows="true"
     tools:context="in.co.officevcan.stg1.ovkksapp.NavigationActivity">
 
-    <android.support.design.widget.AppBarLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorSplash"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
+        android:background="@color/colorSplash"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     <include layout="@layout/content_navigation" />
 
