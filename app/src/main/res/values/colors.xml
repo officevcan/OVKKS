@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorIndicater">#ecd95a</color>
 
     <!--splash screen background color and appbar color-->
     <color name="colorSplash">#329b0d</color>
