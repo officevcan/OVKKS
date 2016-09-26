@@ -43,7 +43,7 @@ public class HealthInfoTabFragment extends Fragment {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
         adapter.addFragment(new HospitalDetailFragment(), "Hospital Detail");
         adapter.addFragment(new BloodDonerDetailFragment(), "Blood donor detail");
-        adapter.addFragment(new PanelDoctorDetailFragment(), "Panel Doctors with detail & address");
+        adapter.addFragment(new PanelDoctorDetailFragment(), "Doctors detail");
         viewPager.setAdapter(adapter);
     }
     //endregion
