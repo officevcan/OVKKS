@@ -15,7 +15,13 @@
             android:id="@+id/app_bar"
             layout="@layout/app_bar"/>
     </LinearLayout>
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/containerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    </FrameLayout>
+  <!--  <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -29,6 +35,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp">
         </WebView>
-    </LinearLayout>
+    </LinearLayout>-->
+
 
 </LinearLayout>
