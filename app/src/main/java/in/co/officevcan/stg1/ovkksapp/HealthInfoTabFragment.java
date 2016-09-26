@@ -15,12 +15,11 @@ import adapter.ViewPagerAdapter;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AboutUsTabLayoutFragment extends Fragment
-{
-    public static TabLayout tabLayout;
+public class HealthInfoTabFragment extends Fragment {
+    public static TabLayout HealthTabLayout;
     public static ViewPager viewPager;
 
-    public AboutUsTabLayoutFragment() {
+    public HealthInfoTabFragment() {
         // Required empty public constructor
     }
 
@@ -29,24 +28,24 @@ public class AboutUsTabLayoutFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_about_us_tab_layout, container, false);
+        View view= inflater.inflate(R.layout.fragment_health_info_tab, container, false);
+
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
-        tabLayout = (TabLayout) view.findViewById(R.id.AboutUsTabLayout);
-        tabLayout.setupWithViewPager(viewPager);
+        HealthTabLayout = (TabLayout) view.findViewById(R.id.HealthTabLayout);
+        HealthTabLayout.setupWithViewPager(viewPager);
         return view;
     }
-    private void setupViewPager(ViewPager viewPager)
-    {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
-        adapter.addFragment(new AboutDetailFragment(), "About Us");
-        adapter.addFragment(new BirthOfKksFragment(), "Birth Of KKS");
-        adapter.addFragment(new OurAchivementFragment(), "Ours Achivement.");
-        adapter.addFragment(new OnGoingPlanFragment(), "On Going Plan");
-        adapter.addFragment(new FuturePlanFragment(), "Future Plan");
-        viewPager.setAdapter(adapter);
 
+    //region SetUpViewPager Method
+    private void setupViewPager(ViewPager viewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
+        adapter.addFragment(new HospitalDetailFragment(), "Hospital Detail");
+        adapter.addFragment(new BloodDonerDetailFragment(), "Blood donor detail");
+        adapter.addFragment(new PanelDoctorDetailFragment(), "Panel Doctors with detail & address");
+        viewPager.setAdapter(adapter);
     }
+    //endregion
 
 }

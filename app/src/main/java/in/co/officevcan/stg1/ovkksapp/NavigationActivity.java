@@ -94,6 +94,9 @@ public class NavigationActivity extends AppCompatActivity
             finish();
 
         } else if (id == R.id.navHealth) {
+            Intent i=new Intent(NavigationActivity.this,HealthInformationActivity.class);
+            startActivity(i);
+            finish();
 
         } else if (id == R.id.navPlant) {
 
