@@ -12,4 +12,6 @@
 
     <!--NavColor-->
     <color name="colorNav">#616161</color>
+
+    <color name="Colornavheader">#3CBE10</color>
 </resources>
