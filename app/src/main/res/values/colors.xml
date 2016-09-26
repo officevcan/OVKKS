@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorIndicater">#ffff00</color>
     <color name="colorIndicaterTab">#000000</color>
+    <color name="colorName">#000000</color>
 
     <!--splash screen background color and appbar color-->
     <color name="colorSplash">#329b0d</color>
