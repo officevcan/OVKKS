@@ -28,10 +28,18 @@ import adapter.WageRevisionRecyclerAdapter;
 
 public class WageRevisionFragment extends Fragment {
 
+    ArrayList<WageRevisionModal> lstwageRevisionModal;
+    WageRevisionRecyclerAdapter adapter;
     RecyclerView rvDisplay;
     Context mContext;
-    ArrayList<WageRevisionModal> lstwageRevisionModal;
 
+   LinearLayoutManager llm;
+    String GET_JSON_DATA_HTTP_URL = "http://www.stg1.officevcan.co.in/Android/KKSWebService/demo.json";
+    String JSON_NAME = "name";
+
+    JsonArrayRequest jsonArrayRequest;
+
+    RequestQueue requestQueue;
 
     public WageRevisionFragment() {
         // Required empty public constructor
@@ -44,52 +52,63 @@ public class WageRevisionFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_wage_revision, container, false);
 
+        lstwageRevisionModal = new ArrayList<>();
+
         rvDisplay = (RecyclerView) view.findViewById(R.id.rvDisplay);
         rvDisplay.setHasFixedSize(true);
-
-        LinearLayoutManager llm = new LinearLayoutManager(mContext);
+        llm = new LinearLayoutManager(getActivity());
         rvDisplay.setLayoutManager(llm);
 
-        final WageRevisionRecyclerAdapter objwageAdapter = new WageRevisionRecyclerAdapter(lstwageRevisionModal);
-        rvDisplay.setAdapter(objwageAdapter);
-        MakeJSONObjectRequest();
+        JSON_DATA_WEB_CALL();
         return view;
     }
 
-    private void MakeJSONObjectRequest() {
-        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
-        String url = "http://www.stg1.officevcan.co.in/Android/KKSWebService/demo.json";
+    public void JSON_DATA_WEB_CALL() {
 
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
-            @Override
-            public void onResponse(JSONArray response) {
-                try {
-                    if (response.length() > 0) {
-                        for (int i = 0; i < response.length(); i++) {
-                            JSONObject jsonObject = response.getJSONObject(i);
-                            WageRevisionModal wageRevisionModal = new WageRevisionModal();
-                            if (!jsonObject.isNull("name")) {
-                                wageRevisionModal.name = jsonObject.getString("name");
-                            }
+        jsonArrayRequest = new JsonArrayRequest(GET_JSON_DATA_HTTP_URL,
 
-                            lstwageRevisionModal.add(i, wageRevisionModal);
-                        }
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
 
-
-                        //  objwageAdapter.notifyDataSetChanged();
+                        JSON_PARSE_DATA_AFTER_WEBCALL(response);
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                System.out.println(error.getMessage());
-            }
-        });
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
 
-        requestQueue.add(jsonArrayRequest);
+                        requestQueue = Volley.newRequestQueue(getActivity());
+
+                        requestQueue.add(jsonArrayRequest);
+                    }
+                });
+
     }
 
+    public void JSON_PARSE_DATA_AFTER_WEBCALL(JSONArray array) {
+
+        for (int i = 0; i < array.length(); i++) {
+
+            WageRevisionModal GetDataAdapter2 = new WageRevisionModal();
+
+            JSONObject json = null;
+            try {
+                json = array.getJSONObject(i);
+
+                GetDataAdapter2.setName(json.getString(JSON_NAME));
+
+            } catch (JSONException e) {
+
+                e.printStackTrace();
+            }
+            lstwageRevisionModal.add(GetDataAdapter2);
+        }
+
+        adapter = new WageRevisionRecyclerAdapter(lstwageRevisionModal, getActivity());
+
+        rvDisplay.setAdapter(adapter);
+
+    }
 }
+

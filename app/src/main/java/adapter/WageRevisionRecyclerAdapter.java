@@ -1,5 +1,6 @@
 package adapter;
 
+import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,9 +19,13 @@ import in.co.officevcan.stg1.ovkksapp.R;
  */
 public class WageRevisionRecyclerAdapter extends RecyclerView.Adapter<WageRevisionRecyclerAdapter.WageViewHolder> {
     List<WageRevisionModal> wageRevisionModal;
+    Context context;
+    LayoutInflater layoutInflater;
 
-    public WageRevisionRecyclerAdapter(List<WageRevisionModal> lstwageRevisionModal) {
+    public WageRevisionRecyclerAdapter(List<WageRevisionModal> lstwageRevisionModal, Context context) {
         this.wageRevisionModal = lstwageRevisionModal;
+        this.context = context;
+        this.layoutInflater = LayoutInflater.from(context);
     }
 
 
@@ -34,7 +39,8 @@ public class WageRevisionRecyclerAdapter extends RecyclerView.Adapter<WageRevisi
 
     @Override
     public void onBindViewHolder(WageViewHolder holder, int position) {
-        holder.Name.setText(wageRevisionModal.get(position).name);
+        WageRevisionModal getDataAdapter1 = wageRevisionModal.get(position);
+        holder.Name.setText(getDataAdapter1.getName());
     }
 
     @Override
