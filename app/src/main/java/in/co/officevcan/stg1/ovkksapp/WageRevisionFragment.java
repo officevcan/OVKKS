@@ -58,7 +58,7 @@ public class WageRevisionFragment extends Fragment {
         rvDisplay.setHasFixedSize(true);
         llm = new LinearLayoutManager(getActivity());
         rvDisplay.setLayoutManager(llm);
-        makeJsonArrayRequest();
+     //   makeJsonArrayRequest();
         return view;
     }
 
