@@ -21,8 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AboutActivity" />
-        <activity android:name=".NavigationActivity" />
-        <activity android:name="in.co.officev.HealthInformationActivity"></activity>
+        <activity android:name="in.co.officevcan.stg1.ovkksapp.NavigationActivity" />
+        <activity android:name="HealthInformationActivity"></activity>
     </application>
 
 </manifest>
