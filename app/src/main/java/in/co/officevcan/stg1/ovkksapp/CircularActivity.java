@@ -1,14 +1,13 @@
 package in.co.officevcan.stg1.ovkksapp;
 
-import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.ProgressBar;
+import android.view.MenuItem;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -29,23 +28,21 @@ import adapter.CircularRecyclerAdapter;
 /**
  * Created by admin on 28-Sep-16.
  */
-public class CircularActivity extends AppCompatActivity
-{
+public class CircularActivity extends AppCompatActivity {
     Toolbar app_bar;
     Context context;
     List<CircularModal> GetDataAdapter1;
     RecyclerView recyclerView;
     RecyclerView.LayoutManager recyclerViewlayoutManager;
     RecyclerView.Adapter recyclerViewadapter;
-   // ProgressBar progressBar;
-    JsonArrayRequest jsonArrayRequest ;
-    RequestQueue requestQueue ;
+    // ProgressBar progressBar;
+    JsonArrayRequest jsonArrayRequest;
+    RequestQueue requestQueue;
 
     String GET_JSON_DATA_HTTP_URL = "http://www.stg1.officevcan.co.in/Android/KKSWebService/demo.json";
     String JSON_NAME = "name";
 
-    protected void onCreate (Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_circular);
 
@@ -71,7 +68,8 @@ public class CircularActivity extends AppCompatActivity
         JSON_DATA_WEB_CALL();
 
     }
-    public void JSON_DATA_WEB_CALL(){
+
+    public void JSON_DATA_WEB_CALL() {
 
         jsonArrayRequest = new JsonArrayRequest(GET_JSON_DATA_HTTP_URL,
 
@@ -79,7 +77,7 @@ public class CircularActivity extends AppCompatActivity
                     @Override
                     public void onResponse(JSONArray response) {
 
-  //                      progressBar.setVisibility(View.GONE);
+                        //                      progressBar.setVisibility(View.GONE);
 
                         JSON_PARSE_DATA_AFTER_WEBCALL(response);
                     }
@@ -95,11 +93,12 @@ public class CircularActivity extends AppCompatActivity
 
         requestQueue.add(jsonArrayRequest);
     }
-    public void JSON_PARSE_DATA_AFTER_WEBCALL(JSONArray array){
 
-        for(int i = 0; i<array.length(); i++) {
+    public void JSON_PARSE_DATA_AFTER_WEBCALL(JSONArray array) {
 
-           CircularModal GetDataAdapter2 = new CircularModal();
+        for (int i = 0; i < array.length(); i++) {
+
+            CircularModal GetDataAdapter2 = new CircularModal();
 
             JSONObject json = null;
             try {
@@ -119,5 +118,12 @@ public class CircularActivity extends AppCompatActivity
         recyclerViewadapter = new CircularRecyclerAdapter(GetDataAdapter1, this);
 
         recyclerView.setAdapter(recyclerViewadapter);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent ii = new Intent(CircularActivity.this, NavigationActivity.class);
+        startActivity(ii);
+        return super.onOptionsItemSelected(item);
     }
 }

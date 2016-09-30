@@ -58,7 +58,7 @@ public class WageRevisionFragment extends Fragment {
         rvDisplay.setHasFixedSize(true);
         llm = new LinearLayoutManager(getActivity());
         rvDisplay.setLayoutManager(llm);
-     //   makeJsonArrayRequest();
+        makeJsonArrayRequest();
         return view;
     }
 
@@ -111,9 +111,9 @@ public class WageRevisionFragment extends Fragment {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                VolleyLog.d(getTag(), "Error: " + error.getMessage());
+                VolleyLog.d("VolleyError", "Error: " + error.getMessage());
                 Toast.makeText(getActivity(),
-                        error.getMessage(), Toast.LENGTH_SHORT).show();
+                        error.getMessage(), Toast.LENGTH_LONG).show();
                 hidepDialog();
             }
         });
