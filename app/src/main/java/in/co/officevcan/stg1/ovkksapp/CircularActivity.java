@@ -1,5 +1,6 @@
 package in.co.officevcan.stg1.ovkksapp;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -35,7 +36,7 @@ public class CircularActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager recyclerViewlayoutManager;
     RecyclerView.Adapter recyclerViewadapter;
-    // ProgressBar progressBar;
+    private ProgressDialog pDialog;
     JsonArrayRequest jsonArrayRequest;
     RequestQueue requestQueue;
 
@@ -58,26 +59,38 @@ public class CircularActivity extends AppCompatActivity {
 
         GetDataAdapter1 = new ArrayList<>();
         recyclerView = (RecyclerView) findViewById(R.id.rvDisplay);
-        //progressBar = (ProgressBar) findViewById(R.id.progressBar1);
+        pDialog = new ProgressDialog(CircularActivity.this);
+        pDialog.setMessage("Please wait...");
+        pDialog.setCancelable(false);
         recyclerView.setHasFixedSize(true);
         recyclerViewlayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(recyclerViewlayoutManager);
 
-//        progressBar.setVisibility(View.VISIBLE);
 
         JSON_DATA_WEB_CALL();
 
     }
+    private void showpDialog() {
+        if (!pDialog.isShowing())
+            pDialog.show();
+    }
 
-    public void JSON_DATA_WEB_CALL() {
+    private void hidepDialog() {
+        if (pDialog.isShowing())
+            pDialog.dismiss();
+    }
 
+
+    public void JSON_DATA_WEB_CALL()
+    {
+        showpDialog();
         jsonArrayRequest = new JsonArrayRequest(GET_JSON_DATA_HTTP_URL,
 
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
 
-                        //                      progressBar.setVisibility(View.GONE);
+
 
                         JSON_PARSE_DATA_AFTER_WEBCALL(response);
                     }
@@ -92,10 +105,12 @@ public class CircularActivity extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
 
         requestQueue.add(jsonArrayRequest);
+
     }
 
-    public void JSON_PARSE_DATA_AFTER_WEBCALL(JSONArray array) {
-
+    public void JSON_PARSE_DATA_AFTER_WEBCALL(JSONArray array)
+    {
+        showpDialog();
         for (int i = 0; i < array.length(); i++) {
 
             CircularModal GetDataAdapter2 = new CircularModal();
@@ -118,6 +133,7 @@ public class CircularActivity extends AppCompatActivity {
         recyclerViewadapter = new CircularRecyclerAdapter(GetDataAdapter1, this);
 
         recyclerView.setAdapter(recyclerViewadapter);
+        hidepDialog();
     }
 
     @Override
