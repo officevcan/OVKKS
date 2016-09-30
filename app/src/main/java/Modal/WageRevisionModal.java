@@ -3,8 +3,10 @@ package Modal;
 /**
  * Created by admin on 9/26/2016.
  */
+
+
 public class WageRevisionModal {
-    String name;
+    public String name;
 
     public WageRevisionModal() {
     }
@@ -16,4 +18,5 @@ public class WageRevisionModal {
     public void setName(String name) {
         this.name = name;
     }
+
 }
