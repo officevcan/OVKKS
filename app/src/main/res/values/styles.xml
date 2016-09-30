@@ -31,4 +31,33 @@
         <item name="color">@color/colorWhite</item>
     </style>
 
+
+    <!--Edittext style-->
+    <style name="DarkEditText"  parent="Material.Widget.EditText">
+        <!--<item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Body1</item>-->
+        <item name="android:textColor">@color/colorName</item>
+        <item name="android:textColorHint">@color/colorName</item>
+        <item name="et_dividerColor">@color/Colorloginbutton</item>
+        <item name="et_labelTextColor">@color/Colorloginbutton</item>
+        <item name="et_supportTextErrorColor">#FFFF0000</item>
+        <item name="et_dividerErrorColor">#FFFF0000</item>
+
+    </style>
+
+
+    <!-- Button Style -->
+
+    <style name="LightFlatButtonRippleStyle" parent="Material.Drawable.Ripple.Touch.Light">
+        <item name="android:background">@color/Colorloginbutton</item>
+        <item name="rd_cornerRadius">8dp</item>
+    <!--    <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Button</item>-->
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="DarkFlatButtonRippleStyle" parent="Material.Drawable.Ripple.Touch">
+        <item name="android:background">@color/Colorloginbutton</item>
+        <item name="rd_cornerRadius">8dp</item>
+      <!--  <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Button</item>-->
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
 </resources>

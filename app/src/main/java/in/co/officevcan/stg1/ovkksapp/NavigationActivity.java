@@ -103,9 +103,12 @@ public class NavigationActivity extends AppCompatActivity
         } else if (id == R.id.navGallery) {
 
         } else if (id == R.id.navCir) {
-
+            Intent i=new Intent(NavigationActivity.this,CircularActivity.class);
+            startActivity(i);
+        }else if (id == R.id.navLogin) {
+            Intent i = new Intent(NavigationActivity.this, LoginActivity.class);
+            startActivity(i);
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

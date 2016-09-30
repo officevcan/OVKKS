@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainlin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/mylin1">
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/mylin2">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/loginpage_icon"
+            android:id="@+id/mainlogoimg"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linscroll"
+            android:focusableInTouchMode="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/mylin3">
+
+                <com.rey.material.widget.EditText
+                    android:id="@+id/etemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textEmailAddress"
+                    style="@style/Material.Widget.EditText.Light"
+                    android:drawableLeft="@drawable/email_icon_black"
+                    android:textStyle="bold"
+                    android:drawablePadding="20dp"
+                    android:singleLine="true"
+                    android:hint="Mobile No/Email"
+                    android:gravity="left"/>
+                <!--
+                style="@style/Material.Widget.EditText.Light"-->
+
+                <com.rey.material.widget.EditText
+                    android:id="@+id/etpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textPassword"
+                    android:textStyle="bold"
+                    android:drawablePadding="20dp"
+                    android:singleLine="true"
+                    android:hint="Password"
+                    android:drawableLeft="@drawable/password_icon_black"
+                    style="@style/Material.Widget.EditText.Light"
+                    android:gravity="left"/>
+
+                <com.rey.material.widget.Button
+                    android:id="@+id/btnlogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:text="LOGIN"
+                    app:v_styleId="@array/button_flat"/>
+
+
+
+            </LinearLayout>
+            </LinearLayout>
+    </ScrollView>
+</LinearLayout>
