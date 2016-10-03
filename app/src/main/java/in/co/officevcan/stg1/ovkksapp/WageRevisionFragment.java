@@ -49,10 +49,6 @@ public class WageRevisionFragment extends Fragment {
 
         lstwage = new ArrayList<>();
 
-        pDialog = new ProgressDialog(getActivity());
-        pDialog.setMessage("Please wait...");
-        pDialog.setCancelable(false);
-
         rvDisplay = (RecyclerView) view.findViewById(R.id.rvDisplay);
         rvDisplay.setHasFixedSize(true);
         llm = new LinearLayoutManager(getActivity());
@@ -61,19 +57,11 @@ public class WageRevisionFragment extends Fragment {
         return view;
     }
 
-    private void showpDialog() {
-        if (!pDialog.isShowing())
-            pDialog.show();
-    }
-
-    private void hidepDialog() {
-        if (pDialog.isShowing())
-            pDialog.dismiss();
-    }
-
     private void makeJsonArrayRequest() {
 
-        showpDialog();
+        pDialog = new ProgressDialog(getActivity());
+        pDialog.setMessage("Please wait...");
+        pDialog.setCancelable(false);
 
         JsonArrayRequest req = new JsonArrayRequest(urlJsonArry,
                 new Response.Listener<JSONArray>() {
@@ -89,7 +77,7 @@ public class WageRevisionFragment extends Fragment {
                                 JSONObject jsonObject = response.getJSONObject(i);
                                 WageRevisionModal person = new WageRevisionModal();
                                 if (!jsonObject.isNull("name")) {
-                                    person.name = jsonObject.getString("name");
+                                    person.name = jsonObject.getString("name"); //here we can fetch webservice field
                                 }
                                 lstwage.add(i, person);
 
@@ -105,7 +93,7 @@ public class WageRevisionFragment extends Fragment {
                                     Toast.LENGTH_LONG).show();
                         }
 
-                        hidepDialog();
+                        pDialog.dismiss();
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -113,7 +101,7 @@ public class WageRevisionFragment extends Fragment {
                 VolleyLog.d("VolleyError", "Error: " + error.getMessage());
                 Toast.makeText(getActivity(),
                         error.getMessage(), Toast.LENGTH_SHORT).show();
-                hidepDialog();
+                pDialog.dismiss();
             }
         });
 

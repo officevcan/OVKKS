@@ -44,7 +44,6 @@ Context context;
         TextView tvAddress, tvEmail, tvConactNo, tvHospitalName;
         ImageView imgAddress, imgEmail, imgContactNo;
 
-
         HospitalViewHolder(View itemView) {
             super(itemView);
             cv = (CardView) itemView.findViewById(R.id.hospital_card_view);
