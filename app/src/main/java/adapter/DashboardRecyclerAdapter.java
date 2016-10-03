@@ -2,6 +2,7 @@ package adapter;
 
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,10 +53,12 @@ public class DashboardRecyclerAdapter extends RecyclerView.Adapter<DashboardRecy
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
+        CardView cv;
         public TextView txttitle;
         public ViewHolder(View itemView) {
             super(itemView);
-            txttitle = (TextView) itemView.findViewById(R.id.textlink) ;
+            cv = (CardView) itemView.findViewById(R.id.dashboardcard_view);
+            txttitle = (TextView) itemView.findViewById(R.id.textlink);
 
         }
     }
