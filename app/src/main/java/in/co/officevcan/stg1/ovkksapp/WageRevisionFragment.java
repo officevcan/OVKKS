@@ -35,7 +35,6 @@ public class WageRevisionFragment extends Fragment {
     LinearLayoutManager llm;
     private String urlJsonArry = "http://www.stg1.officevcan.co.in/Android/KKSWebService/demo.json";
     private ProgressDialog pDialog;
-    private String jsonResponse;
 
     public WageRevisionFragment() {
         // Required empty public constructor
@@ -113,7 +112,7 @@ public class WageRevisionFragment extends Fragment {
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d("VolleyError", "Error: " + error.getMessage());
                 Toast.makeText(getActivity(),
-                        error.getMessage(), Toast.LENGTH_LONG).show();
+                        error.getMessage(), Toast.LENGTH_SHORT).show();
                 hidepDialog();
             }
         });
