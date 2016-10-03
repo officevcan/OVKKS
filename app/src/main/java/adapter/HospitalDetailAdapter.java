@@ -10,16 +10,21 @@ import android.widget.ImageView;
 
 import com.rey.material.widget.TextView;
 
+import java.util.List;
+
+import Modal.HospitalDetailModal;
 import in.co.officevcan.stg1.ovkksapp.R;
 
 /**
  * Created by admin on 9/26/2016.
  */
 public class HospitalDetailAdapter extends RecyclerView.Adapter<HospitalDetailAdapter.HospitalViewHolder> {
-Context context;
+    List<HospitalDetailModal> lstHospitalDetail;
+    Context context;
 
-    public HospitalDetailAdapter(Context context) {
-        this.context=context;
+    public HospitalDetailAdapter(List<HospitalDetailModal> lstHospitalDetail, Context context) {
+        this.lstHospitalDetail = lstHospitalDetail;
+        this.context = context;
     }
 
     @Override
@@ -31,26 +36,29 @@ Context context;
 
     @Override
     public void onBindViewHolder(HospitalViewHolder holder, int position) {
-
+        holder.txtHospitalName.setText(lstHospitalDetail.get(position).getHospitalName());
+        holder.txtAddress.setText(lstHospitalDetail.get(position).getAddress());
+        holder.txtEmail.setText(lstHospitalDetail.get(position).getEmail());
+        holder.txtConactNo.setText(lstHospitalDetail.get(position).getContactNo());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return lstHospitalDetail.size();
     }
 
     public static class HospitalViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
-        TextView tvAddress, tvEmail, tvConactNo, tvHospitalName;
+        TextView txtAddress, txtEmail, txtConactNo, txtHospitalName;
         ImageView imgAddress, imgEmail, imgContactNo;
 
         HospitalViewHolder(View itemView) {
             super(itemView);
             cv = (CardView) itemView.findViewById(R.id.hospital_card_view);
-            tvHospitalName = (TextView) itemView.findViewById(R.id.tvHospitalName);
-            tvEmail = (TextView) itemView.findViewById(R.id.tvEmail);
-            tvConactNo = (TextView) itemView.findViewById(R.id.tvContact);
-            tvAddress = (TextView) itemView.findViewById(R.id.tvAddress);
+            txtHospitalName = (TextView) itemView.findViewById(R.id.tvHospitalName);
+            txtEmail = (TextView) itemView.findViewById(R.id.tvEmail);
+            txtConactNo = (TextView) itemView.findViewById(R.id.tvContact);
+            txtAddress = (TextView) itemView.findViewById(R.id.tvAddress);
 
             imgAddress = (ImageView) itemView.findViewById(R.id.imgAddress);
             imgContactNo = (ImageView) itemView.findViewById(R.id.imgContact);
