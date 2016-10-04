@@ -23,4 +23,7 @@
 
 
     <string name="txtaddress">32,Sassoon Road,Bnd Garden Rd,Near Pune Railway Station,Sangamvadi,Pune,Maharastra 41 1001</string>
+    <string name="txtPersonName">Chaudhari Rohitbhai Fatesingbhai</string>
+    <string name="contactno">+91 9712 309633</string>
+    <string name="contactno2">+91 9712 309633</string>
 </resources>

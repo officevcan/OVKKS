@@ -29,7 +29,7 @@ public class WageRevisionAdapter extends RecyclerView.Adapter<WageRevisionAdapte
 
     @Override
     public PersonViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.wage_cardview, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.raw_wage, parent, false);
         PersonViewHolder pvh = new PersonViewHolder(v);
         return pvh;
     }
