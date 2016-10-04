@@ -51,6 +51,10 @@ public class HospitalDetailFragment extends Fragment {
 
         lstHospitalDetail = new ArrayList<>();
 
+        pDialog = new ProgressDialog(getActivity());
+        pDialog.setMessage("Please wait...");
+        pDialog.setCancelable(false);
+
         rvDisplay = (RecyclerView) view.findViewById(R.id.rvDisplay);
         rvDisplay.setHasFixedSize(true);
         llm = new LinearLayoutManager(getActivity());
@@ -62,10 +66,7 @@ public class HospitalDetailFragment extends Fragment {
 
     private void makeJsonArrayRequest() {
 
-        pDialog = new ProgressDialog(getActivity());
-        pDialog.setMessage("Please wait...");
-        pDialog.setCancelable(false);
-
+        pDialog.show();
         JsonArrayRequest req = new JsonArrayRequest(urlJsonArry,
                 new Response.Listener<JSONArray>() {
                     @Override

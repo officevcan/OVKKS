@@ -25,9 +25,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import Modal.CircularModal;
 import Modal.DashboardModal;
-import adapter.CircularRecyclerAdapter;
 import adapter.DashboardRecyclerAdapter;
 
 
@@ -42,12 +40,11 @@ public class DashboardFragment extends Fragment
     RecyclerView recyclerView;
     RecyclerView.LayoutManager recyclerViewlayoutManager;
     RecyclerView.Adapter recyclerViewadapter;
-    private ProgressDialog pDialog;
     JsonArrayRequest jsonArrayRequest;
     RequestQueue requestQueue;
-
     String GET_JSON_DATA_HTTP_URL = "http://www.stg1.officevcan.co.in/Android/KKSWebService/DashboardDetail.json";
     String JSON_NAME = "name";
+    private ProgressDialog pDialog;
 
     public DashboardFragment() {
         // Required empty public constructor
@@ -67,7 +64,6 @@ public class DashboardFragment extends Fragment
         recyclerView.setHasFixedSize(true);
         recyclerViewlayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(recyclerViewlayoutManager);
-
 
         JSON_DATA_WEB_CALL();
         return view;
@@ -89,8 +85,6 @@ public class DashboardFragment extends Fragment
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
-
-
 
                         JSON_PARSE_DATA_AFTER_WEBCALL(response);
                     }
