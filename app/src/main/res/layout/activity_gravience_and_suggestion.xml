@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="in.co.officevcan.stg1.ovkksapp.GravienceAndSuggestionActivity">
 
@@ -24,15 +25,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <com.rey.material.widget.TextView
-            android:id="@+id/textlink"
+            android:id="@+id/textsubject"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:layout_weight="4"
-            android:inputType="textMultiLine"
+            android:inputType="text"
             android:text="Subject"
             android:textColor="@color/colorName"
             android:textSize="20sp"
@@ -45,12 +45,50 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             style="@style/Material.Widget.EditText.Light"
             android:textStyle="bold"
-            android:drawablePadding="20dp"
-            android:singleLine="true"
+            android:singleLine="true"/>
 
-           />
+        <com.rey.material.widget.TextView
+            android:id="@+id/textgravience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="4"
+            android:inputType="textMultiLine"
+            android:text="Gravience / Suggestion"
+            android:textColor="@color/colorName"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/etgravience"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="textMultiLine"
+            style="@style/Material.Widget.EditText.Light"
+            android:textStyle="bold"
+            android:singleLine="true"/>
+            <!--android:minLines="10"-->
+
+        <com.rey.material.widget.Button
+            android:id="@+id/btnlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:text="Submit"
+            app:v_styleId="@array/button_flat"/>
+
+
     </LinearLayout>
 </LinearLayout>

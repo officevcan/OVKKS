@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.rey.material.app.ThemeManager;
+
 public class GravienceAndSuggestionActivity extends AppCompatActivity
 {
     Toolbar app_bar;
@@ -15,6 +17,7 @@ public class GravienceAndSuggestionActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gravience_and_suggestion);
+        ThemeManager.init(this, 1, 0, null);
 
         context = getApplicationContext();
 
