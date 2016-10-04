@@ -18,59 +18,133 @@
         card_view:elevation="14dp">
 
         <LinearLayout
-            android:id="@+id/ParentLayout"
+            android:id="@+id/mainlin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/scroll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
+                <com.rey.material.widget.TextView
+                    android:id="@+id/tvHospitalName"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:scrollbars="none">
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="5"
+                    android:background="@color/Colornavheader"
+                    android:text="Jahangir Hospital"
+                    android:textColor="@color/colorName"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></com.rey.material.widget.TextView>
 
-                    <LinearLayout
-                        android:id="@+id/childLayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/Colorloginbutton"
-                        android:orientation="horizontal">
+                <com.rey.material.widget.TextView
+                    android:id="@+id/txtHospitalName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/Colorloginbutton"
+                    android:text="Jahangir Hospital"
+                    android:textColor="@color/colorName"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></com.rey.material.widget.TextView>
 
-                        <com.rey.material.widget.TextView
-                            android:id="@+id/tvHospitalName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="2dp"
-                            android:layout_marginTop="5dp"
-                            android:text="@string/txtPersonName"
-                            android:textColor="@color/colorName"
-                            android:textSize="15sp"
-                            android:textStyle="bold"></com.rey.material.widget.TextView>
 
-                        <com.rey.material.widget.TextView
-                            android:id="@+id/txtHospitalName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="2dp"
-                            android:layout_marginTop="5dp"
-                            android:text="Jahangir Hospital"
-                            android:textColor="@color/colorName"
-                            android:textSize="15sp"
-                            android:textStyle="bold"></com.rey.material.widget.TextView>
-
-                    </LinearLayout>
-                </HorizontalScrollView>
 
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@mipmap/home_nav" />
+
+                <com.rey.material.widget.TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/colorName"
+                    android:textStyle="bold"></com.rey.material.widget.TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@mipmap/home_nav" />
+
+                <com.rey.material.widget.TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorName"
+                    android:textStyle="bold"></com.rey.material.widget.TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lincontact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@mipmap/home_nav" />
+
+                <com.rey.material.widget.TextView
+                    android:id="@+id/tvContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorName"
+                    android:textStyle="bold"></com.rey.material.widget.TextView>
+            </LinearLayout>
+
         </LinearLayout>
 
 
