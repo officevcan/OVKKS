@@ -1,6 +1,7 @@
 package adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -14,7 +15,9 @@ import java.util.List;
 
 import Modal.CircularModal;
 import Modal.DashboardModal;
+import in.co.officevcan.stg1.ovkksapp.GravienceAndSuggestionActivity;
 import in.co.officevcan.stg1.ovkksapp.R;
+import in.co.officevcan.stg1.ovkksapp.UserDashboardActivity;
 
 /**
  * Created by admin on 03-Oct-16.
@@ -59,6 +62,26 @@ public class DashboardRecyclerAdapter extends RecyclerView.Adapter<DashboardRecy
             super(itemView);
             cv = (CardView) itemView.findViewById(R.id.dashboardcard_view);
             txttitle = (TextView) itemView.findViewById(R.id.textlink);
+            context = itemView.getContext();
+
+            cv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final Intent intent;
+                    switch (getPosition()){
+                        case 0:
+                            intent =  new Intent(context, GravienceAndSuggestionActivity.class);
+                            break;
+                        case 1:
+                            intent =  new Intent(context, GravienceAndSuggestionActivity.class);
+                            break;
+                        default:
+                            intent =  new Intent(context, UserDashboardActivity.class);
+                            break;
+                    }
+                    context.startActivity(intent);
+                }
+            });
 
         }
     }

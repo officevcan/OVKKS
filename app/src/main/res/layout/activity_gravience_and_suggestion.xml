@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.co.officevcan.stg1.ovkksapp.GravienceAndSuggestionActivity">
+
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lin2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.rey.material.widget.TextView
+            android:id="@+id/textlink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="4"
+            android:inputType="textMultiLine"
+            android:text="Subject"
+            android:textColor="@color/colorName"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/etsubject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="textEmailAddress"
+            style="@style/Material.Widget.EditText.Light"
+            android:textStyle="bold"
+            android:drawablePadding="20dp"
+            android:singleLine="true"
+
+           />
+    </LinearLayout>
+</LinearLayout>
