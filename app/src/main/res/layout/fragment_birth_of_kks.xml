@@ -4,45 +4,44 @@
     android:layout_height="match_parent"
     tools:context="in.co.officevcan.stg1.ovkksapp.BirthOfKksFragment">
 
-    <!-- TODO: Update blank fragment layout -->
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/shape_linear_border"
+        android:layout_marginBottom="20dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp">
+        android:background="@drawable/shape_linear_border"
+        android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/imgbirth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/birth_kks_icon"
-            android:id="@+id/imgbirth"
             android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="20dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:layout_marginTop="40dp"
-            android:layout_marginBottom="20dp"/>
+            android:src="@mipmap/birth_kks_icon"/>
 
         <com.rey.material.widget.TextView
             android:id="@+id/tvbirthday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginTop="5dp"
+            android:gravity="center"
             android:text="Happy Birthday"
             android:textColor="@color/Colornavheader"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:gravity="center"></com.rey.material.widget.TextView>
+            android:textStyle="bold"></com.rey.material.widget.TextView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
