@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="in.co.officevcan.stg1.ovkksapp.GravienceAndSuggestionActivity">
 
@@ -18,77 +18,83 @@
             layout="@layout/app_bar" />
     </LinearLayout>
 
-
-    <LinearLayout
-        android:id="@+id/lin2"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <com.rey.material.widget.TextView
-            android:id="@+id/textsubject"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="4"
-            android:inputType="text"
-            android:text="Subject"
-            android:textColor="@color/colorName"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+        android:layout_height="match_parent">
 
-        <com.rey.material.widget.EditText
-            android:id="@+id/etsubject"
+        <LinearLayout
+            android:id="@+id/lin2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:inputType="text"
-            style="@style/Material.Widget.EditText.Light"
-            android:textStyle="bold"
-            android:singleLine="true"/>
-
-        <com.rey.material.widget.TextView
-            android:id="@+id/textgravience"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="4"
-            android:inputType="textMultiLine"
-            android:text="Gravience / Suggestion"
-            android:textColor="@color/colorName"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <com.rey.material.widget.EditText
-            android:id="@+id/etgravience"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:inputType="textMultiLine"
-            style="@style/Material.Widget.EditText.Light"
-            android:textStyle="bold"
-            android:singleLine="true"/>
+            <com.rey.material.widget.TextView
+                android:id="@+id/textsubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="4"
+                android:inputType="text"
+                android:text="Subject"
+                android:textColor="@color/colorName"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.rey.material.widget.EditText
+                android:id="@+id/etsubject"
+                style="@style/Material.Widget.EditText.Light"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textStyle="bold" />
+
+            <com.rey.material.widget.TextView
+                android:id="@+id/textgravience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="4"
+                android:inputType="textMultiLine"
+                android:text="Gravience / Suggestion"
+                android:textColor="@color/colorName"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.rey.material.widget.EditText
+                android:id="@+id/etgravience"
+                style="@style/Material.Widget.EditText.Light"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:inputType="textMultiLine"
+                android:singleLine="true"
+                android:textStyle="bold" />
             <!--android:minLines="10"-->
 
-        <com.rey.material.widget.Button
-            android:id="@+id/btnlogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textStyle="bold"
-            android:text="Submit"
-            app:v_styleId="@array/button_flat"/>
+            <com.rey.material.widget.Button
+                android:id="@+id/btnlogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Submit"
+                android:textStyle="bold"
+                app:v_styleId="@array/button_flat" />
 
 
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
