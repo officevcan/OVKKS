@@ -51,6 +51,10 @@ public class BloodDonerDetailFragment extends Fragment {
 
         lstBloodDonar = new ArrayList<>();
 
+        pDialog = new ProgressDialog(getActivity());
+        pDialog.setMessage("Please wait...");
+        pDialog.setCancelable(false);
+
         rvDisplay = (RecyclerView) view.findViewById(R.id.rvDisplay);
         rvDisplay.setHasFixedSize(true);
         llm = new LinearLayoutManager(getActivity());
@@ -59,12 +63,18 @@ public class BloodDonerDetailFragment extends Fragment {
         return view;
     }
 
+    private void showpDialog() {
+        if (!pDialog.isShowing())
+            pDialog.show();
+    }
+
+    private void hidepDialog() {
+        if (pDialog.isShowing())
+            pDialog.dismiss();
+    }
+
     private void makeJsonArrayRequest() {
-
-        pDialog = new ProgressDialog(getActivity());
-        pDialog.setMessage("Please wait...");
-        pDialog.setCancelable(false);
-
+        showpDialog();
         JsonArrayRequest req = new JsonArrayRequest(urlJsonArry,
                 new Response.Listener<JSONArray>() {
                     @Override
@@ -104,7 +114,7 @@ public class BloodDonerDetailFragment extends Fragment {
                                     Toast.LENGTH_LONG).show();
                         }
 
-                        pDialog.dismiss();
+                        hidepDialog();
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -112,7 +122,7 @@ public class BloodDonerDetailFragment extends Fragment {
                 VolleyLog.d("VolleyError", "Error: " + error.getMessage());
                 Toast.makeText(getActivity(),
                         error.getMessage(), Toast.LENGTH_SHORT).show();
-                pDialog.dismiss();
+                hidepDialog();
             }
         });
 

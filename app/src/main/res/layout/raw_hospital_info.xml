@@ -32,7 +32,7 @@
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/Colornavheader"
+                android:background="@color/Colorloginbutton"
                 android:text="Jahangir Hospital"
                 android:textColor="@color/colorName"
                 android:textSize="20sp"
@@ -81,7 +81,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="7dp"
-                    android:src="@mipmap/home_nav" />
+                    android:src="@mipmap/email_icon_black" />
 
                 <com.rey.material.widget.TextView
                     android:id="@+id/tvEmail"
@@ -109,7 +109,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="7dp"
-                    android:src="@mipmap/home_nav" />
+                    android:src="@mipmap/blood_contact_icon" />
 
                 <com.rey.material.widget.TextView
                     android:id="@+id/tvContact"
