@@ -26,10 +26,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/Colornavheader"
                 android:orientation="horizontal">
 
                 <com.rey.material.widget.TextView
-                    android:id="@+id/tvHospitalName"
+                    android:id="@+id/txtDoctorName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -58,7 +59,6 @@
                     android:textStyle="bold"></com.rey.material.widget.TextView>
 
 
-
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linaddress"
@@ -77,7 +77,7 @@
                     android:src="@mipmap/home_nav" />
 
                 <com.rey.material.widget.TextView
-                    android:id="@+id/tvAddress"
+                    android:id="@+id/txtAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -106,7 +106,7 @@
                     android:src="@mipmap/home_nav" />
 
                 <com.rey.material.widget.TextView
-                    android:id="@+id/tvEmail"
+                    android:id="@+id/txtEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -134,7 +134,7 @@
                     android:src="@mipmap/home_nav" />
 
                 <com.rey.material.widget.TextView
-                    android:id="@+id/tvContact"
+                    android:id="@+id/txtContact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
