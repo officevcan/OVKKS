@@ -26,4 +26,6 @@
     <string name="txtPersonName">Chaudhari Rohitbhai Fatesingbhai</string>
     <string name="contactno">+91 9712 309633</string>
     <string name="contactno2">+91 9712 309633</string>
+    <string name="txtBirthday">Happy Birthday</string>
+    <string name="txtBirthdayMessage">Many Many Happy Returns Of The Day</string>
 </resources>
