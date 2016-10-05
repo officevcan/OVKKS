@@ -48,14 +48,14 @@
     <!-- Button Style -->
 
     <style name="LightFlatButtonRippleStyle" parent="Material.Drawable.Ripple.Touch.Light">
-        <item name="android:background">@color/Colorloginbutton</item>
+        <item name="android:background">@color/colorSplash</item>
         <item name="rd_cornerRadius">8dp</item>
     <!--    <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Button</item>-->
         <item name="android:textColor">@color/colorWhite</item>
     </style>
 
     <style name="DarkFlatButtonRippleStyle" parent="Material.Drawable.Ripple.Touch">
-        <item name="android:background">@color/Colorloginbutton</item>
+        <item name="android:background">@color/colorSplash</item>
         <item name="rd_cornerRadius">8dp</item>
       <!--  <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Button</item>-->
         <item name="android:textColor">@color/colorWhite</item>

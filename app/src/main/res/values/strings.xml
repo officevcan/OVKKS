@@ -17,15 +17,21 @@
     <string name="navGrav">Graviance</string>
     <string name="navCir">Circular</string>
     <string name="navLogin">Login</string>
+    <!--end-->
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
+    
     <string name="txtaddress">32,Sassoon Road,Bnd Garden Rd,Near Pune Railway Station,Sangamvadi,Pune,Maharastra 41 1001</string>
     <string name="txtPersonName">Chaudhari Rohitbhai Fatesingbhai</string>
     <string name="contactno">+91 9712 309633</string>
     <string name="contactno2">+91 9712 309633</string>
     <string name="txtBirthday">Happy Birthday</string>
     <string name="txtBirthdayMessage">Many Many Happy Returns Of The Day</string>
+    
+    <!--Login-->
+    <string name="SiEmail">Mobile No/Email</string>
+    <string name="SiPassword">Password</string>
+    <string name="SignUp">Login</string>
+    <!--end-->
 </resources>
